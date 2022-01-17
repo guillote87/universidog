@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     overflow: hidden;
     padding: var(-padding-container);
@@ -23,7 +23,7 @@ body {
 
 .header {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     min-height: 600px;
     max-height: 800px;
     position: relative;
@@ -44,32 +44,38 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
     z-index: -1;
 }
-
+.nav-header{
+    position: fixed;
+    transition: all 0.5s ease;
+}
 .nav {
-    -padding-container: 0;
-    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-
 }
 
+.scroll {
+    height: 100px;
+}
 
-.nav-title{
-    font: weight 300;
+.nav-title {
     padding-left: 1rem;
     font-size: 1rem;
     margin-top: 30px;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
-  
+
 }
-.logo img{
- padding-top: 20px;
- width: 75px;
- height: auto;
+
+.logo img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 75px;
+    height: auto;
 }
 
 .navlink {
@@ -87,15 +93,38 @@ body {
 }
 
 
+.nav-header.active {
+    background: #7ca740;
+    z-index: 1;
+}
+
+.nav-header.active a {
+    color: #000;
+}
+
 .nav-links {
     color: #fff;
     text-decoration: none;
+    padding: 8px 5px;
 }
+
+.navlink li a:hover {
+    background-color: #7ca740;
+    border-radius: 15px;
+    transition: all 0, 5s ease;
+}
+
+nav.active a:hover {
+    background-color: #fef0de;
+    border-radius: 15px;
+    transition: all 0 , 5s ease;
+    }
 
 .nav-menu {
     margin-left: auto;
     cursor: pointer;
     display: none;
+    
 }
 
 .nav-img {
@@ -111,6 +140,7 @@ body {
 /*Header Container*/
 
 .header-container {
+    margin-top: 100px;
     max-width: 800px;
     -padding-container: 0;
     display: grid;
@@ -183,13 +213,13 @@ body {
 /* Formacion */
 
 .formacion {
-    background-color:  #7ca740;
+    background-color: #7ca740;
     background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #fef0de 0.5px);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     overflow: hidden;
-    
-    
+
+
 }
 
 .formacion-container {
@@ -198,7 +228,7 @@ body {
     gap: 1em;
     align-items: center;
     margin-bottom: 20px;
-  
+
 }
 
 .formacion-card {
@@ -226,14 +256,14 @@ body {
     padding: 10px;
     width: 30px;
     justify-content: center;
-   
+
 }
 
 
 /* Slider */
 
 .comentarios {
-    background-color:#fef0de;
+    background-color: #fef0de;
 }
 
 .comentarios-container {
@@ -262,8 +292,8 @@ body {
     object-fit: cover;
     object-position: 50% 30%;
     border: solid 2px #fef0de
-    
 }
+
 .comentarios-text {
     max-width: 700px;
 }
@@ -287,31 +317,28 @@ body {
 }
 
 /* Oferta*/
-.oferta {
-    text-align: center;
-}
 
 .oferta-container {
     display: grid;
     gap: 2em;
     padding-top: 50px;
     padding-bottom: 30px;
+    text-align: center
 }
 
 /* Footer */
 
 .footer {
-    background-color: #1D293F;
+    background-color: #7ca740;
 }
 
 .footer-title {
-    font-weight: 300;
     font-size: 2rem;
     margin-bottom: 30px;
 }
 
 .footer-title {
-    color: #fff;
+    color: #000;
 }
 
 
@@ -319,16 +346,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 60px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 10px;
+
 }
 
 .nav-footer {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     display: grid;
     gap: 1em;
     grid-auto-flow: row;
     height: 100%;
+}
+
+footer .nav-links {
+    color: #000000
 }
 
 .nav-link-footer {
@@ -341,7 +373,7 @@ body {
 .footer-copy {
     -padding-container: 10px 0;
     text-align: center;
-    color: #fff;
+    color: #000000;
 }
 
 .footer-copyright {
@@ -358,6 +390,10 @@ body {
     margin-top: 10px;
 }
 
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Media queries */
 
@@ -365,11 +401,13 @@ body {
     .nav-menu {
         display: block;
     }
-    .logo img{
+
+    .logo img {
         padding-top: 20px;
         width: 12%;
         height: auto;
-       }
+    }
+
     .navlink-menu {
         position: fixed;
         background-color: #000;
@@ -406,7 +444,7 @@ body {
         font-size: 2.5rem;
         margin-top: 15px;
     }
-    
+
     .info-main {
         gap: 2em;
     }
@@ -484,11 +522,13 @@ body {
     .header-paragraph {
         font-size: 1rem;
     }
-    .logo img{
+
+    .logo img {
         padding-top: 30px;
         width: 20%;
         height: auto;
-       }
+    }
+
     .subtitle {
         font-size: 1.8rem;
     }
