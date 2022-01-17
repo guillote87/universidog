@@ -13,13 +13,13 @@ sr.reveal('.logo',{
 })
 
 sr.reveal('.formacion-image',{
-    duration: 3000,
+    duration: 2000,
    origin: 'left',
    distance: '-100px'
 })
 
 sr.reveal('.oferta-container',{
-    duration: 4000,
+    duration: 2000,
    origin: 'top',
    distance: '-100px'
 })
