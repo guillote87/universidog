@@ -183,7 +183,7 @@ body {
 /* Formacion */
 
 .formacion {
-    background-color:  #fef0de;
+    background-color:  #7ca740;
     background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #fef0de 0.5px);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
@@ -261,8 +261,9 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: 50% 30%;
+    border: solid 2px #fef0de
+    
 }
-
 .comentarios-text {
     max-width: 700px;
 }
@@ -279,7 +280,7 @@ body {
 }
 
 .comentarios-course {
-    background-color: royalblue;
+    background-color: #7ca740;
     color: #fff;
     display: inline-block;
     padding: 5px
