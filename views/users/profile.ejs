@@ -25,7 +25,7 @@
 
         </div>
         <% if (user.roles.id_roles == 1) { %>
-        <div class="task">
+       <div class = "container"> <div class="task">
             <ul>
                 <li> <a href="/cursos/create">Crear Curso</a></li>
                 <li> <a href="http://localhost:3001/<%= user.id_usuario %>">Panel de Control</a></li>
@@ -38,6 +38,7 @@
             </ul>
         </div>
         <% } %>
+    </div>
     </main>
    
     <%- include("../partials/footer.ejs")%>
