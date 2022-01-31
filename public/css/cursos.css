@@ -1,0 +1,159 @@
+@import url(styles.css);
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #001a49;
+    --crema: #fef0de;
+    --verde: #7ca740;
+    --negro: #333433
+}
+* {
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 40vh;
+    min-height: 400px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    color: #fff;
+    
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url("../images/banner-cursos.jpg");
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+body {
+       background-color:var(--crema);
+}
+   
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ 
+}
+.cursos-title{
+    text-align: center;
+    margin:2rem
+}
+.cursos img {
+    margin: 5px;
+    border-radius: 10px 10px 10px 10px;
+    height: 300px;
+    width: 300px;
+}
+
+.cursos article {
+    margin: 2rem;
+    border-radius: 10px 10px 10px 10px;
+    background: rgba(51, 51, 51, 0.9);
+}
+.price{
+    text-align: center;
+}
+.name{
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    height: 100%;
+}
+article p {
+    font-weight: bolder;
+    color: white;
+    margin: 10px;
+}
+
+article h4 {
+    font-size: 18px;
+    color: white;
+    margin: 10px;
+}
+
+.fila {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+}
+
+.small img {
+    width: 500px;
+    height: 300px;
+    filter: grayscale(100%)
+}
+
+.small {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    color: yellow;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.fila img:hover {
+    filter: grayscale(0%);
+}
+
+.iconos-envios {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.iconos-envios p {
+    font-size: 18px;
+}
+
+.iconos-envios i {
+    font-size: 35px;
+    color: rgba(107, 32, 135, 0.75);
+}
+.main-article{
+    border-top: var(--violeta) 2px solid;
+    align-items: center;
+}
+
+
+
+@media (min-width:780px) {
+    .small img {
+        padding: 10px;
+        height: 400px;
+        width: 600px;
+    }
+     
+}
+@media (min-width:1000px)
+ {
+    .fila {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

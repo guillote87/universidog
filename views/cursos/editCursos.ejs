@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet" />
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/createCursos.css" />
+  <title>Nicotine</title>
+</head>
+
+<body>
+  <%- include('../partials/header.ejs') %>
+
+  <main>
+    <section>
+      <div class="create-box">
+        <h2>Agregar Curso</h2>
+        <form class="create-form" action="/cursos/<%= curso.id %>/edit?_method=PUT" method="POST"
+          enctype="multipart/form-data">
+          <div class="control-form">
+            <input name="name" type="text" class="control" placeholder="<%= curso.name%>" />
+          </div>
+          <div class="control-form">
+            <textarea name="description" class="control"><%= curso.description %></textarea>
+          </div>
+          <div class="control-form">
+            <input name="image" type="file" accept=".jpg, .png" class="control" />
+          </div>
+          <div class="control-form">
+            <select name="category" id="" required class="control">
+
+              <% allCategories.forEach(category => { %>
+              <option value="<%= category.id %>">
+                <% if (curso.category == category.id) { %><% }; %><%= category.description %></option>
+              <% }); %>
+            </select>
+
+          </div>
+
+          <button type="submit" class="control">Modificar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <%- include('../partials/footer.ejs') %>
+
+  <script src="/js/slider.js"></script>
+  <script src="/js/menu.js"></script>
+  <script src="/js/scrollreveal.js"></script>
+  <script src="/js/scroll.js"></script>
+
+</body>
+
+</html>

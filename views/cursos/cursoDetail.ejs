@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= curso.name %>
+    </title>
+    <script src="https://kit.fontawesome.com/f09d19ae7c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/cursoDetail.css" />
+
+</head>
+
+<body>
+    <%- include ('../partials/header.ejs') %>
+    <main>
+        <section class="interes">
+            <h2>Tambien podría interesarte</h2>
+            <% for (let i=0; i < interes.length ; i++) { %>
+            <div class="contenedor-interes">
+                <div>
+                    <a href="/cursos/<%= interes[i].id%>"><img class="imagen-interes"
+                            src="/images/cursos/<%= interes[i].image %>" alt="imagen curso" /></a>
+                </div>
+                <div class="info-interes">
+                    <h3 class="titulo-interes">
+                        <%= interes[i].name %>
+                    </h3>
+                    <p class="precio-interes">$
+                        <%= interes[i].price %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+        </section>
+        <section class= "curso-container">
+            <div class="titulo-curso">
+                <h2>
+                    <%= curso.name %>
+                </h2>
+            </div>
+            <div class="contenedor-fotos">
+                <img class="curso" src="/images/cursos/<%= curso.image%>" alt="imagen curso" />
+            </div>
+        </section>
+        <section class="detalles">
+            <div class="precio">
+                <h2>
+                    <%= curso.description%>
+                </h2>
+                <br />
+                <br />
+                <h2>$
+                    <%= curso.price%>
+                </h2>
+                <span>x 6 cuotas sin interés</span>
+            </div>
+            <form action="/users/cart/<%= curso.id %>" method="POST" class="form">
+                <div class="boton">
+                   <button type="submit">Agregar al carrito</button></a>
+                </div>
+            </form>
+           
+            <div class="edit">
+                <div class="boton">
+                    <a href="/cursos/<%= curso.id %>/edit"><button>Editar curso</button></a>
+                </div>
+            </div>
+            <div class="delete">
+                <form action="/cursos/<%= curso.id %>/delete?_method=DELETE" method="POST">
+                    <div class="boton">
+                        <button type="submit">Borrar Curso</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contenedor-mercado">
+                <img class="mercado" src="/images/mercado-pago.png" alt="Mercado Pago" />
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+
+    
+    <script src="/js/menu.js"></script>
+    <script src="/js/scrollreveal.js"></script>
+    <script src="/js/scroll.js"></script>
+</body>
+</html>

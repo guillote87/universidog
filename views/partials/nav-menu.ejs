@@ -1,0 +1,34 @@
+<nav class="nav nav-header ">
+    <div class="logo">
+        <img src="/images/logo.png" alt="Logo universidog">  
+        <h2 class="nav-title">Universidog <br><small>#AprendiendoJuntos</small></h2>
+    </div>
+    <ul class="navlink navlink-menu">
+        <li class="nav-items">
+            <a href="/" class="nav-links">Inicio</a>
+        </li>
+        <li class="nav-items">
+            <a href="/#nosotros" class="nav-links">Nosotros</a>
+        </li>
+        <li class="nav-items">
+            <a href="/cursos/list" class="nav-links">Cursos</a>
+        </li>
+        <li class="nav-items">
+            <a href="/user/curso/:id" class="nav-links">Contacto</a>
+        </li>
+        <img src="/images/close.svg" alt="" class="nav-close">
+    </ul>
+    <div class="nav-menu">
+        <img class=nav-img src="/images/ham-menu.svg" alt="hamb-menu">
+    </div>
+    <div class="login log-img">
+        <% if (locals.isLogged){ %>
+                 <a href="/users/profile"class="nav-links"> <img src="/images/usuarios/<%= locals.userLogged.image%>" alt=""> <br> Hola, <%= locals.userLogged.name %> </a>
+                 <a href="/users/logout" class="nav-links">Logout</a>
+        <% } else { %>
+            <a href="/users/login" class="nav-links">Login</a>
+            <%     }%>
+      
+      
+    </div>
+</nav>

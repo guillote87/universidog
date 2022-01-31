@@ -1,0 +1,26 @@
+@import url(styles.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+main div {
+    padding: 20px;
+    margin-left: 30px;
+    background-color: white;
+}
+main img{
+        border: solid violet 2px;
+    width: 15%;
+}
+.rol{
+    font-weight: bold;
+}
+.task{
+    align-content:flex-end
+}

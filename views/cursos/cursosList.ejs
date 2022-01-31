@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cursos.css" />
+
+    <title>Universidog - Cursos</title>
+</head>
+
+<body>
+    <header class="header">
+        <%- include('../partials/nav-menu.ejs') %>
+        <section class="header-container container">
+            <h1 class="header-title">Nuestros Cursos</h1>
+            
+        </section>
+    </header>
+    <main>
+        <section class="container">
+            <div class="cursos">
+                <% for (i=0; i< curso.length; i++){ %>
+                <article>
+                    <a href="/cursos/<%= curso[i].id%>"><img src="/images/cursos/<%= curso[i].image %>" alt=""></a>
+                    <div class="main-article">
+                        <h4 class="name"> <%= curso[i].name%></h4>
+                        <p class="price">$ <%= curso[i].price%></p>
+
+                    </div>
+                </article>
+                <%}%>  
+        </div>
+        </section>
+        </main> 
+    <%- include('../partials/footer.ejs') %>
+
+                <script src="/js/menu.js"></script>
+                <script src="/js/scrollreveal.js"></script>
+                <script src="/js/scroll.js"></script>
+</body>
+
+</html>

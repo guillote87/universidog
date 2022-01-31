@@ -1,0 +1,157 @@
+.nav-header{
+    position: fixed;
+    transition: all 0.5s ease;
+    width: 100%;
+    color: #fff;
+   
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav-title {
+    padding-left: 1rem;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+.scroll {
+    height: 100px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 75px;
+    height: auto;
+}
+.login{
+    align-items: center;
+    margin-right: 10px; 
+}
+.login a{
+    font-size: 0,3rem;
+}
+.login img{
+    border: var(--crema) 3px solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.navlink {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+
+}
+
+.nav-items {
+    list-style: none;
+}
+.nav-header.active {
+    background: #7ca740;
+    z-index: 1;
+}
+
+.nav-header.active a {
+    color: #000;
+}
+
+.nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 5px;
+}
+
+.navlink li a:hover {
+    background-color: #7ca740;
+    border-radius: 15px;
+}
+
+nav.active a:hover {
+    background-color: #fef0de;
+    border-radius: 15px;
+    
+    }
+
+.nav-menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-img {
+    display: block;
+    width: 30px;
+
+}
+
+.nav-close {
+    display: none;
+}
+
+@media (max-width:800px){
+    .nav-menu {
+        display: block;
+    }
+
+    .logo img {
+        padding-top: 20px;
+        width: 12%;
+        height: auto;
+    }
+   
+
+    .navlink-menu {
+        position: fixed;
+        background-color:#7ca740;
+        top: 0;
+        left: 0;
+        font-size: 1.5rem;
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    .navlink-show {
+        -show: block;
+        opacity: 1;
+        pointer-events: unset;     
+    }
+   
+
+    .nav-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+        display: block;
+    }
+
+   
+
+}
+
+@media (max-width:600px){
+    .logo img {
+        padding-top: 30px;
+        width: 20%;
+        height: auto;
+    }
+}

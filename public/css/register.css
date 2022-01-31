@@ -1,0 +1,133 @@
+@import url(styles.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.register-box {
+    max-width: 348px;
+    background-color: transparent;
+    padding: 15px 15px;
+    border: 2px black solid;
+    margin: 30px 0;
+    border-radius: 15px;
+}
+
+.register-box h2 {
+    padding: 5px;
+    margin: auto;
+}
+
+.control {
+    width: 100%;
+    width: 100%;
+    border-color: black;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+  
+}
+
+.send-button {
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+.send-button:hover {
+    background-color: rgba(107, 32, 135, 0.75);
+    font-weight: bold;
+}
+
+.errors{
+    font-size: 14px;
+    color: red;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .icono-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .icono-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+.control-form {
+	position: relative;
+}
+.icono-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+.control:focus {
+	border: 3px solid blue;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+.input-error-activo{
+    display:block
+}
+
+.envio-exitoso {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.envio-exitoso-activo {
+	display: block;
+}
+
+.avatar img {
+    width: 40%;
+}
+.mensaje-error {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.mensaje-error-activo {
+	display: block;
+}
+
+
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidog</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link href="./css.normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+        <section class="container info-main ">
+            <h2 class="subtitle">¿Que aprenderas con nosotros?</h2>
+            <p class="info-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, aliquid? Quod
+                porro quas fugiat cum amet nihil necessitatibus ipsa, nemo assumenda quam maiores quae perspiciatis
+                sapiente similique et aperiam repudiandae?</p>
+
+            <div class="info">
+                <article class="info-card">
+                    <img src="./images/convivencia.svg" class="info-icon">
+                    <h3 class="info-title">Convivencia</h3>
+                    <p class="info-paragraph">Aprende a convivir cubriendo las necesidades de tu mascota</p>
+                </article>
+                <article class="info-card">
+                    <img src="./images/juegos.svg" class="info-icon">
+                    <h3 class="info-title">Diversion</h3>
+                    <p class="info-paragraph">Aprende a convivir cubriendo las necesidades de tu mascota</p>
+                </article>
+                <article class="info-card">
+                    <img src="./images/enriquecimiento.svg" class="info-icon">
+                    <h3 class="info-title">Enriquecimiento Ambiental</h3>
+                    <p class="info-paragraph">Aprende a convivir cubriendo las necesidades de tu mascota</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="formacion">
+            <div class="container formacion-container">
+                <div class="formacion-text">
+                    <h2 class="subtitle">Curso de formacion para cachorros</h2>
+                    <p class="formacion-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis
+                        cupiditate aspernatur praesentium.</p>
+                    <a href="#" class="cta">Inscribirme</a>
+                </div>
+                <figure class="formacion-card">
+                    <img src="./images/formacion.jpg" class="formacion-image">
+                </figure>
+
+            </div>
+        </section>
+
+        <div class="separacion">
+           <i> <img src="./images/paw.svg" id="nosotros" alt=""></i>
+        </div>
+
+        <section class="comentarios" >
+
+            <div class="comentarios-container container">
+                <img src="./images/left-arrow.svg" class="comentarios-arrow" id="before">
+
+                <section class="comentarios-body comentarios-body-show" data-id="1" >
+                    <div class="comentarios-text">
+                        <h2 class="subtitle">Mi nombre es Jesica Comas, <span class="comentarios-course">Entrenadora
+                                Canina</span></h2>
+                        <p class="comentarios-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Reprehenderit nisi sint architecto at! </p>
+                    </div>
+                    <figure class="comentarios-card">
+                        <img src="./images/jesica.jpeg" alt="" class="comentarios-image">
+                    </figure>
+                </section>
+
+                <section class="comentarios-body" data-id="2">
+                    <div class="comentarios-text">
+                        <h2 class="subtitle">Mi nombre es Zoe,<span class="comentarios-course">Labradora Retriever</span></h2>
+                        <p class="comentarios-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Reprehenderit nisi sint architecto at! </p>
+                    </div>
+                    <figure class="comentarios-card">
+                        <img src="./images/zoe.jpeg" alt="zoe" class="comentarios-image">
+                    </figure>
+                </section>
+
+                <section class="comentarios-body" data-id="3">
+                    <div class="comentarios-text">
+                        <h2 class="subtitle"> Mi nombre es Nirvana,<span class="comentarios-course">Labradora Retriever</span>
+                        </h2>
+                        <p class="comentarios-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Reprehenderit nisi sint architecto at! </p>
+                    </div>
+                    <figure class="comentarios-card">
+                        <img src="./images/nirvana.jpeg" alt="" class="comentarios-image">
+                    </figure>
+                </section>
+
+                <img src="./images/right-arrow.svg" class="comentarios-arrow" id="next">
+
+            </div>
+        </section>
+
+        <section class="oferta-container container">
+            <h2 class="subtitle">¿Estas listo para aprender?</h2>
+            <p class="questions-copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
+                architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
+                eius atque tempora iure ab non autem.</p>
+            <a href="#" class="cta">Aprende ahora</a>
+        </section>
+
+       
+
+       
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <script src="js/slider.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
+
+</html>
