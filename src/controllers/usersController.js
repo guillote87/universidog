@@ -81,8 +81,29 @@ const usersController = {
 
     },
     curso:(req,res) =>{
-        let id_curso = req.params.id;
-        return res.render("users/plantillaCurso")
+        res.render("users/plantillaCurso")
+        },
+    cursosUser: (req, res) => {
+        let user = req.session.userLogged
+        db.Cart.findOne({
+                where: {
+                    id_usuario: user.id_usuario
+                },
+                include: {
+                    model: db.Producto,
+                    include: [
+                        "colors", "sizes"
+                    ]
+                },
+
+            })
+            .then(cart => {
+               // res.json(cart)
+                res.render("users/productCart", {
+                    cart
+                });
+            })
+
     },
     register: (req, res) => {
         res.render("users/register");
@@ -126,7 +147,7 @@ const usersController = {
                         name: req.body.name,
                         email: req.body.email,
                         password: bcrypt.hashSync(req.body.password, 10),
-                        rol: 2,
+                        rol: 1,
                         image: req.file.filename,
                         birthday: req.body.birthday
                     })

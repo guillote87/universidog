@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        name: {
+        title: {
             type: dataTypes.STRING(50),
             allowNull: false
         },
@@ -19,10 +19,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         category: {
             type: dataTypes.INTEGER(11),
-            allowNull: false
-        },
-        image: {
-            type: dataTypes.STRING(100),
             allowNull: false
         },
         price: {
@@ -49,11 +45,13 @@ module.exports = (sequelize, dataTypes) => {
             as: 'categories',
             foreignKey: 'category'
         }),
-            Curso.belongsToMany(models.Cart, {
-                through: models.CartDetail
+            Curso.belongsToMany(models.Usuario, {
+                through: models.CursoDetail
+            }),
+                Curso.belongsTo(models.Usuario, {
+                as: 'usuarios',
+                foreignKey: 'usuario'
             })
-
-
 
     }
 

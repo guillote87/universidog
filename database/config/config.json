@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "universidog",
-    "host": "127.0.0.1",
+    "username": "bc1f605a9d1b2d",
+    "password": "b6016bac",
+    "database": "heroku_fbd0179b74de02d",
+    "host": "us-cdbr-east-05.cleardb.net",
     "dialect": "mysql"
   },
   "test": {

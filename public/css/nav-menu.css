@@ -3,7 +3,6 @@
     transition: all 0.5s ease;
     width: 100%;
     color: #fff;
-   
 }
 .nav {
     display: flex;
@@ -30,12 +29,11 @@
     height: auto;
 }
 .login{
-    align-items: center;
-    margin-right: 10px; 
+       margin-right: 10px; 
+       align-items: center;
+       display:flex
 }
-.login a{
-    font-size: 0,3rem;
-}
+
 .login img{
     border: var(--crema) 3px solid;
     border-radius: 50%;
@@ -76,10 +74,9 @@
     border-radius: 15px;
 }
 
-nav.active a:hover {
+nav.active li a:hover {
     background-color: #fef0de;
     border-radius: 15px;
-    
     }
 
 .nav-menu {

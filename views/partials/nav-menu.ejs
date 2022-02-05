@@ -21,11 +21,14 @@
     <div class="nav-menu">
         <img class=nav-img src="/images/ham-menu.svg" alt="hamb-menu">
     </div>
-    <div class="login log-img">
+    <div class="login">
         <% if (locals.isLogged){ %>
-                 <a href="/users/profile"class="nav-links"> <img src="/images/usuarios/<%= locals.userLogged.image%>" alt=""> <br> Hola, <%= locals.userLogged.name %> </a>
+                 <a href="/users/profile"><img src="/images/usuarios/<%= locals.userLogged.image%>" alt=""></a>
+               
+                 <a href="/users/profile"class="nav-links"> Hola, <%= locals.userLogged.name %> </a>
                  <a href="/users/logout" class="nav-links">Logout</a>
-        <% } else { %>
+               
+                 <% } else { %>
             <a href="/users/login" class="nav-links">Login</a>
             <%     }%>
       

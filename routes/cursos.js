@@ -37,7 +37,6 @@ router.post("/create",fileUpload.single("image"),cursosValidations, cursosContro
 
 router.get("/:id", cursosController.detail);
 
-
 /* Rutas de edicion de cursos */
 router.get("/:id/edit",adminMiddleware, cursosController.editView);
 router.put("/:id/edit",fileUpload.single("image") ,cursosValidations, cursosController.editForm);

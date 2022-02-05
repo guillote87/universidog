@@ -91,7 +91,7 @@ const cursosController = {
                 });
             })
     },
-
+  
     editView: (req, res) => {
         let id = req.params.id;
         db.Curso.findByPk(id)

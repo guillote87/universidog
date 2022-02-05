@@ -32,8 +32,7 @@ router.post("/login", authLoginMiddleware ,usersController.loginProcess)
 
 router.get("/list",usersController.list)
 
-router.get("/curso", usersController.curso)
-
+router.get ("/curso",authMiddleware,usersController.curso)
 router.get("/register",guestMiddleware,usersController.register);
 router.post("/register",fileUpload.single('image'), regVal, usersController.registerForm)
 
