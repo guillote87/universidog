@@ -37,11 +37,12 @@ const cursosController = {
                 })
         } else {
             db.Curso.create({
-                name: req.body.name,
+                title: req.body.name,
                 description: req.body.description,
                 category: req.body.category,
                 price: req.body.price,
-                image: foto
+                image: foto,
+                usuario:14
             })
                 .then(() => {
                     return res.redirect('/');
