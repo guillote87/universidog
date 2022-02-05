@@ -21,6 +21,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
+        image:{
+            type: dataTypes.INTEGER(11),
+            allowNull: false
+        },
         price: {
             type: dataTypes.DOUBLE(10, 2),
             allowNull: false
